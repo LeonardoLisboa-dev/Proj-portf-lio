@@ -1,11 +1,16 @@
-/* Reset */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Inter", sans-serif;
-    background: linear-gradient(112deg,rgba(255, 15, 123, 1) 9%,rgba(248, 155, 41, 1) 100%);
 }
 
-/* Header fixo */
+body {
+    background: linear-gradient(112deg, rgba(255, 15, 123, 1) 9%, rgba(248, 155, 41, 1) 100%);
+}
+
+/* Header */
+
 .header {
     position: fixed;
     top: 0;
@@ -16,18 +21,17 @@ body {
     align-items: center;
     background: linear-gradient(90deg, #ff6347 50%, #ff3366 100%);
     padding: 20px 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
 .header h1 a {
-    margin-left: 200px;
+    margin-left: 150px;
     text-decoration: none;
     color: black;
     font-weight: 700;
     font-size: 52px;
     display: inline-block;
-
 }
 
 .header .nav a {
@@ -46,7 +50,7 @@ body {
 }
 
 .nav {
-    margin-right: 270px;
+    margin-right: 150px;
 }
 
 .nav ul {
@@ -57,57 +61,137 @@ body {
     gap: 60px;
 }
 
-/*menu principal */
+/* Projetos */
 
-main {
+.hidden-text {
+    opacity: 0;
+    transform: translateX(-50%);
+    filter: opacity(0);
+    transition: all 1s;
+}
+
+.show-text {
+    opacity: 1;
+    transform: translateX(0%);
+    filter: opacity(1);
+    transition: all 1s;
+}
+
+.hidden-cards {
+    opacity: 0;
+    transform: translateX(-50%);
+    filter: blur(0px);
+    transition: all 1s;
+}
+
+.show-cards {
+    width: 100%;
+    opacity: 1;
+    transform: translateX(0%);
+    filter: blur(0px);
+    transition: all 1s;
+    transition-delay: 200ms;
+}
+
+.hidden-cards:nth-child(1) {
+    transition-delay: 350ms;
+}
+
+.hidden-cards-3 {
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-50%);
+    filter: blur(0px);
+    transition: all 1s;
+}
+
+.show-cards-3 {
+    opacity: 1;
+    transform: translateX(0%);
+    filter: blur(0px);
+    transition: all 1s;
+    transition-delay: 120ms;
+}
+
+.hidden-cards-3:nth-child(1) {
+    transition-delay: 350ms;
+}
+
+.hidden-cards-3:nth-child(2) {
+    transition-delay: 300ms;
+}
+
+.titulo {
     text-align: center;
     text-decoration: underline;
-    font-size: 44px;
+    font-size: 82px;
+    margin-top: 15vh;
+}
+
+.titulo-1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 82px;
     margin-top: 20vh;
 }
 
-.sites {
+.container {
+    gap: 20px;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
+.card-center {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
 
+.card-center-3 {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
 
-.projetos {
+.card {
+    width: 100%;
+    height: 60vh;
+    margin: 5px;
     background: #FF0051;
-    border-radius: 20px;
-    max-width: 400px;
-    margin: 20px auto;
     color: black;
-    overflow: hidden;
-  }
-  
-  .projetos img {
-    width: 100%;     /* ocupa toda a largura da caixa */
-    height: auto;    /* mantém proporção */
-    display: block;  /* remove espaço branco abaixo da imagem */
-  }
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    flex-direction: column;
+}
 
-  .projetos h2 {
-    margin-block: 5px;
-    text-align: center;
-    font-size: 40px;
+.card img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.card .titulo-card {
     font-weight: 700;
-  }
+    font-size: 1.75rem;
+    margin: 10px;
+}
 
-  .projetos p {
-    margin-block: 25px;
-    font-size: 26px;
-    font-weight: 700;
-  }
-  
-  .projetos h2,
-  .projetos p {
-    padding-inline: 10px;
-  }
+.card .descricao {
+    font-weight: 600;
+    font-size: 1.45rem;
+    padding: 10px;
+}
 
-/* footer */
+/* Footer */
 
 footer {
     background-color: #ff007b4a;
@@ -119,11 +203,10 @@ footer {
 
 footer .texto-footer {
     font-size: 20px;
+    line-height: 2.8rem;
     margin-inline: 75px;
     flex-direction: column;
 }
-
-/*redes sociais*/
 
 .redes-sociais {
     display: grid;
@@ -152,8 +235,6 @@ footer .texto-footer {
 .redes-sociais img {
     height: 35px;
 }
-
-/*logos cps/etec */
 
 .logos-footer {
     display: flex;

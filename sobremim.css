@@ -1,11 +1,17 @@
-/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background: linear-gradient(112deg,rgba(255, 15, 123, 1) 9%,rgba(248, 155, 41, 1) 100%);
+    background: linear-gradient(112deg, rgba(255, 15, 123, 1) 9%, rgba(248, 155, 41, 1) 100%);
 }
 
-/* Header fixo */
+/* Header */
+
 .header {
     position: fixed;
     top: 0;
@@ -16,18 +22,17 @@ body {
     align-items: center;
     background: linear-gradient(90deg, #ff6347 50%, #ff3366 100%);
     padding: 20px 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
 .header h1 a {
-    margin-left: 200px;
+    margin-left: 150px;
     text-decoration: none;
     color: black;
     font-weight: 700;
     font-size: 52px;
     display: inline-block;
-
 }
 
 .header .nav a {
@@ -46,7 +51,7 @@ body {
 }
 
 .nav {
-    margin-right: 270px;
+    margin-right: 150px;
 }
 
 .nav ul {
@@ -57,27 +62,60 @@ body {
     gap: 60px;
 }
 
-/*menu principal */
+/* Sobre mim */
 
 main {
     text-align: center;
     text-decoration: underline;
     font-size: 44px;
-    margin-top: 20vh;
+    margin-top: 18vh;
 }
 
-/* biografia */
+.hidden {
+    opacity: 0;
+    filter: blur(20px);
+    transition: all 0.4s;
+}
+
+.hidden-2 {
+    opacity: 0;
+    transform: translateY(10%);
+    filter: blur(0px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 1s;
+}
+
+.show-2 {
+    opacity: 1;
+    transform: translateY(0%);
+    filter: blur(0px);
+    transition: all 1s;
+    transition-delay: 300ms;
+}
 
 #bio {
     margin-top: 8vh;
     margin-inline: 120px;
     font-size: 50px;
     font-weight: 600;
-    margin-bottom: 15vh;
+    margin-bottom: 5vh;
     text-indent: 120px;
 }
 
-/* footer */
+#bio-2 {
+    margin-inline: 120px;
+    font-size: 50px;
+    font-weight: 600;
+    text-indent: 120px;
+    margin-bottom: 5vh;
+}
+
+/* Footer */
 
 footer {
     background-color: #ff007b4a;
@@ -89,11 +127,10 @@ footer {
 
 footer .texto-footer {
     font-size: 20px;
+    line-height: 2.8rem;
     margin-inline: 75px;
     flex-direction: column;
 }
-
-/*redes sociais*/
 
 .redes-sociais {
     display: grid;
@@ -122,8 +159,6 @@ footer .texto-footer {
 .redes-sociais img {
     height: 35px;
 }
-
-/*logos cps/etec */
 
 .logos-footer {
     display: flex;
