@@ -20,17 +20,17 @@ body {
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(90deg, #ff6347 50%, #ff3366 100%);
-    padding: 20px 40px;
+    padding: 10px 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
 .header h1 a {
-    margin-left: 150px;
+    margin-left: 100px;
     text-decoration: none;
     color: black;
     font-weight: 700;
-    font-size: 52px;
+    font-size: 36px;
     display: inline-block;
 }
 
@@ -38,7 +38,7 @@ body {
     text-decoration: none;
     color: black;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 30px;
     display: inline-block;
     transition: transform 0.2s ease, color 0.2s ease;
     transform-origin: center;
@@ -50,7 +50,7 @@ body {
 }
 
 .nav {
-    margin-right: 150px;
+    margin-right: 100px;
 }
 
 .nav ul {
@@ -58,7 +58,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 60px;
+    gap: 50px;
 }
 
 /* Projetos */
@@ -78,6 +78,7 @@ body {
 }
 
 .hidden-cards {
+    width: 100%;
     opacity: 0;
     transform: translateX(-50%);
     filter: blur(0px);
@@ -85,7 +86,6 @@ body {
 }
 
 .show-cards {
-    width: 100%;
     opacity: 1;
     transform: translateX(0%);
     filter: blur(0px);
@@ -124,15 +124,15 @@ body {
 .titulo {
     text-align: center;
     text-decoration: underline;
-    font-size: 82px;
-    margin-top: 15vh;
+    font-size: 46px;
+    margin-top: 5vh;
 }
 
 .titulo-1 {
     text-align: center;
     text-decoration: underline;
-    font-size: 82px;
-    margin-top: 20vh;
+    font-size: 46px;
+    margin-top: 14vh;
 }
 
 .container {
@@ -141,11 +141,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .card-center {
-    gap: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,13 +160,10 @@ body {
 }
 
 .card {
-    width: 100%;
-    height: 60vh;
+    height: 65vh;
     margin: 5px;
     background: #FF0051;
     color: black;
-    font-size: 22px;
-    font-weight: bold;
     display: flex;
     align-items: center;
     border-radius: 15px;
@@ -181,13 +177,13 @@ body {
 
 .card .titulo-card {
     font-weight: 700;
-    font-size: 1.75rem;
-    margin: 10px;
+    font-size: 26px;
+    margin: 5px;
 }
 
 .card .descricao {
     font-weight: 600;
-    font-size: 1.45rem;
+    font-size: 16px;
     padding: 10px;
 }
 
@@ -202,8 +198,8 @@ footer {
 }
 
 footer .texto-footer {
-    font-size: 20px;
-    line-height: 2.8rem;
+    font-size: 12px;
+    line-height: 1.8rem;
     margin-inline: 75px;
     flex-direction: column;
 }
@@ -228,28 +224,28 @@ footer .texto-footer {
 
 .redes-sociais p {
     color: black;
-    font-size: 22px;
+    font-size: 12px;
     font-weight: 700;
 }
 
 .redes-sociais img {
-    height: 35px;
+    height: 25px;
 }
 
 .logos-footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 21px;
+    padding-top: 15px;
     margin-inline-end: 75px;
 }
 
 #cps {
-    width: 95px;
+    width: 45px;
 }
 
 #etec {
-    width: 89px;
+    width: 50px;
 }
 
 #twitter {
